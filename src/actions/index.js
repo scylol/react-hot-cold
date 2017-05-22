@@ -2,11 +2,9 @@
 
 export const START_NEW_GAME = 'START_NEW_GAME'; 
 
-export const startNewGame = (correctAnswer, guesses, feedback) => ({
+export const startNewGame = () => ({
   type: START_NEW_GAME,
-  correctAnswer,
-  guesses,
-  feedback
+  correctAnswer: Math.round(Math.random() * 100)
 });
 
 export const MAKE_GUESS = 'MAKE_GUESS'; 
@@ -17,5 +15,9 @@ export const makeGuess = (guess) => ({
 });
 
 
-export const DISPLAY_GUESS_LIST = 'DISPLAY_GUESS_LIST';
+export const DISPLAY_INFO = 'DISPLAY_INFO';
+
+export const displayInfo = () => ({
+  type: DISPLAY_INFO
+});
 
