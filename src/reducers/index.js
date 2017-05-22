@@ -7,7 +7,8 @@ const initialState = {
   Modal: false
 };
 
-export const gameReducer = (state=initialState, action) => {
+export const gameReducer = (state, action) => {
+  state = state || initialState;
   if(action.type === START_NEW_GAME) {
     return Object.assign({}, initialState, {
       correctAnswer: action.correctAnswer
