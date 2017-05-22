@@ -17,7 +17,6 @@ export const makeGuess = (guess) => ({
 });
 
 
-export const CHANGE_FEEDBACK = 'CHANGE_FEEDBACK';
 
 
 

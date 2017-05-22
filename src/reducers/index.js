@@ -1,4 +1,4 @@
-import {START_NEW_GAME, MAKE_GUESS, CHANGE_FEEDBACK} from '../actions'; 
+import {START_NEW_GAME, MAKE_GUESS} from '../actions'; 
 
 const initialState = {
   guesses: [],
