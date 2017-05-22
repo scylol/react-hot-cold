@@ -4,9 +4,11 @@ import ReactDOM from 'react-dom';
 
 
 
-import {startNewGame} from './actions';
+import {startNewGame, makeGuess} from './actions';
 import store from './store';
 
+store.dispatch(makeGuess(12));
+console.log(store.getState());
 store.dispatch(startNewGame());
 console.log(store.getState());
 
