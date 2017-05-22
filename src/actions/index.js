@@ -17,9 +17,5 @@ export const makeGuess = (guess) => ({
 });
 
 
-
-
-
-export const DISPLAY_NUM_OF_GUESSES = 'DISPLAY_NUM_OF_GUESSES';
 export const DISPLAY_GUESS_LIST = 'DISPLAY_GUESS_LIST';
 
