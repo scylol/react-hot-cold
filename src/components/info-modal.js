@@ -1,12 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import {displayInfo} from '../actions'
 
 import './info-modal.css';
 
-export default class InfoModal extends React.Component {
+export class InfoModal extends React.Component {
     onClose(event) {
         event.preventDefault();
-        if (this.props.onClose) {
-            this.props.onClose();
+        if (this.props.infoModal) {
+            this.props.dispatch(()=>displayInfo())
         }
     }
 
@@ -30,3 +32,9 @@ export default class InfoModal extends React.Component {
         );
     }
 }
+
+export const mapStateToProps = state => ({
+    infoModal: state.modal
+});
+
+export default connect(mapStateToProps)(InfoModal);

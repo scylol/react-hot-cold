@@ -1,4 +1,4 @@
-import {START_NEW_GAME, MAKE_GUESS, DISPLAY_INFO} from '../actions'; 
+import {START_NEW_GAME, MAKE_GUESS, DISPLAY_INFO} from '../actions';
 
 const initialState = {
   guesses: [],
@@ -39,12 +39,12 @@ export const gameReducer = (state, action) => {
     });
   }
   else if (action.type === DISPLAY_INFO) {
+    console.log('you are here')
     return Object.assign({}, state, {
       Modal: !state.Modal
     });
   }
-  
-  
+
+
   return state;
 };
-
