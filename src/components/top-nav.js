@@ -1,21 +1,23 @@
 import React from 'react';
 
+import {startNewGame, displayInfo} from '../actions';
+import { connect } from 'react-redux';
+
 import './top-nav.css';
 
-export default class TopNav extends React.Component {
+export class TopNav extends React.Component {
     onNewGame(event) {
         event.preventDefault();
-        if (this.props.onNewGame) {
-            this.props.onNewGame();
-        }
+        this.props.dispatch(startNewGame())
     }
 
     onInfo(event) {
+        console.log('inside oninfo')
         event.preventDefault();
-        if (this.props.onInfo) {
-            this.props.onInfo();
-        }
+        this.props.dispatch(displayInfo())
     }
+
+ 
 
     render() {
         return (
@@ -37,3 +39,6 @@ export default class TopNav extends React.Component {
     }
 };
 
+
+
+export default connect()(TopNav);

@@ -4,7 +4,7 @@ const initialState = {
   guesses: [],
   feedback: 'Make your guess!',
   correctAnswer: Math.round(Math.random() * 100),
-  Modal: false
+  modal: false
 };
 
 export const gameReducer = (state, action) => {
@@ -39,9 +39,9 @@ export const gameReducer = (state, action) => {
     });
   }
   else if (action.type === DISPLAY_INFO) {
-    console.log('you are here')
+    console.log('you are here');
     return Object.assign({}, state, {
-      Modal: !state.Modal
+      modal: !state.modal
     });
   }
 

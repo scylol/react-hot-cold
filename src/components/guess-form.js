@@ -25,8 +25,6 @@ export class GuessForm extends React.Component {
         );
     }
 };
-export const mapStateToProps = state => ({
-    guessLength: state.guesses.length
-});
 
-export default connect(mapStateToProps)(GuessForm);
+
+export default connect()(GuessForm);

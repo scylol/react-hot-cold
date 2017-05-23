@@ -11,7 +11,7 @@ store.dispatch(makeGuess(12));
 console.log(store.getState());
 store.dispatch(startNewGame());
 console.log(store.getState());
-store.dispatch(displayInfo());
+// store.dispatch(displayInfo());
 console.log(store.getState());
 
 

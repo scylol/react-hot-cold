@@ -7,13 +7,13 @@ import './info-modal.css';
 export class InfoModal extends React.Component {
     onClose(event) {
         event.preventDefault();
-        if (this.props.infoModal) {
-            this.props.dispatch(()=>displayInfo())
-        }
+        this.props.dispatch(displayInfo())  
     }
 
     render() {
+    
         return (
+           
             <div className="overlay" id="modal">
                 <div className="content">
                     <h3>What do I do?</h3>
@@ -25,7 +25,7 @@ export class InfoModal extends React.Component {
                             <li>3. You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
                         </ul>
                         <p>So, Are you ready?</p>
-                        <a className="close" href="#" onClick={e => this.onClose(e)}>Got It!</a>
+                        <a className="close" href="#" onClick={e => this.onClose(e)}>Got It!</a>    
                     </div>
                 </div>
             </div>
@@ -33,8 +33,6 @@ export class InfoModal extends React.Component {
     }
 }
 
-export const mapStateToProps = state => ({
-    infoModal: state.modal
-});
 
-export default connect(mapStateToProps)(InfoModal);
+
+export default connect()(InfoModal);

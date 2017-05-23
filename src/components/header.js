@@ -10,24 +10,19 @@ import './header.css';
 export class Header extends React.Component  {
     constructor(props) {
         super(props);
-        // this.state = {
-        //     showInfoModal: false
-        // };
     }
 
 
     render() {
-
+        
         let infoModal;
         if (this.props.infoModal) {
-            console.log("doing the infomodal render step")
-            infoModal = <InfoModal onClose={() => this.props.dispatch(displayInfo())} />;
+            infoModal = <InfoModal />;
         }
-
+        
         return (
             <header>
-                <TopNav onInfo={() => this.props.dispatch(displayInfo())}
-                    onNewGame={()=>this.props.dispatch(startNewGame())} />
+                <TopNav />
                 {infoModal}
                 <h1>HOT or COLD</h1>
             </header>
